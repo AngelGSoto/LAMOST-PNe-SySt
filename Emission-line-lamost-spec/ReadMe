@@ -1,0 +1,178 @@
+J/A+A/643/A122    Active deep learning in large spectros. surveys (Skoda+, 2020)
+================================================================================
+Active deep learning method for discovery of objects of interest in
+large spectroscopic surveys.
+    Skoda P., Podsztavek 0., Tvrdik P.
+    <Astron. Astrophys. 643, A122 (2020)>
+    =2020A&A...643A.122S        (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Surveys ; Stars, emission ; Line Profiles
+Keywords: surveys - virtual observatory tools - methods: statistical -
+          techniques: spectroscopic - stars: emission-line, Be - line: profiles
+
+Abstract:
+    Current archives of the LAMOST telescope contain millions of
+    pipeline-processed spectra that have probably never been seen by human
+    eyes. Most of the rare objects with interesting physical properties,
+    however, can only be identified by visual analysis of their
+    characteristic spectral features. A proper combination of interactive
+    visualisation with modern machine learning techniques opens new ways
+    to discover such objects.
+
+    We apply active learning classification methods supported by deep
+    convolutional neural networks to automatically identify complex
+    emission-line shapes in multi-million spectra archives.
+
+    We used the pool-based uncertainty sampling active learning method
+    driven by a custom-designed deep convolutional neural network with 12
+    layers. The architecture of the network was inspired by VGGNet,
+    AlexNet, and ZFNet, but it was adapted for operating on
+    one-dimensional feature vectors. The unlabelled pool set is
+    represented by 4.1 million spectra from the LAMOST data release 2
+    survey. The initial training of the network was performed on a
+    labelled set of about 13000 spectra obtained in the 400{AA} wide
+    region around H{alpha} by the 2m Perek telescope of the Ondrejov
+    observatory, which mostly contains spectra of Be and related
+    early-type stars. The differences between the Ondrejov
+    intermediate-resolution and the LAMOST low-resolution spectrographs
+    were compensated for by Gaussian blurring and wavelength conversion.
+
+    After several iterations, the network was able to successfully
+    identify emission-line stars with an error smaller than 6.5%. Using
+    the technology of the Virtual Observatory to visualise the results, we
+    discovered 1013 spectra of 948 new candidates of emission-line objects
+    in addition to 664 spectra of 549 objects that are listed in SIMBAD
+    and 2644 spectra of 2291 objects identified in an earlier paper of a
+    Chinese group led by Wen Hou. The most interesting objects with
+    unusual spectral properties are discussed in detail.
+
+Description:
+    Tables containing spectra of emission stars identified by active deep
+    learning (ADL) of the paper.
+
+    The table "cans-bad.dat" contains spectra identified as bad, either
+    due to reduction artifacts, extreme noise or due to their wrong class
+    (e.g. pure absorption), despite the prediction of a spectrum as an
+    emission-line object. However, there are some interesting objects as
+    well.
+
+    The table "cans-hou.dat" contains spectra identified by our ADL method
+    and also by Hou et al. (2016RAA....16..138H). If we were able to
+    cross-match them with SIMBAD the relevant data from SIMBAD are given
+    as well. The table "cans-new.dat" contains spectra of yet unknown
+    emission stars (neither cross-matched with SIMBAD, nor discovered by
+    Hou et al., 2016RAA....16..138H). They deserve further examination.
+
+    The table "cans-sim.dat" contains spectra of emission stars discovered
+    by ADL which were sucessfully cross-matched with SIMBAD within 20
+    arcsec radius. They were not found by Hou et al.
+    (2016RAA....16..138H). In fact they may serve, together with the
+    "cans-hou.dat", as a resource of relatively recent spectra of known
+    emission line objects.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+cans-new.dat     295     1013   Spectra of unknown emission stars
+cans-hou.dat     421     2644   Spectra identified by both us and
+                                 Hou et al. (2016RAA....16..138H)
+cans-sim.dat     436      664   Identified spectra cross-matched with SIMBAD
+cans-bad.dat     299       58   ADL identified bad spectra
+--------------------------------------------------------------------------------
+
+See also:
+   V/146 : LAMOST DR1 catalogs (Luo+, 2015)
+
+Byte-by-byte Description of file: cans-bad.dat cans-new.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1- 45  A45   ---     SpecL     LAMOST Spectrum filename
+  47- 72  A26   ---     LAMOST    LAMOST Object name
+  74- 84  F11.7 deg     RAdeg     LAMOST Right ascension (J2000)
+  86- 95  F10.7 deg     DEdeg     LAMOST Declination (J2000)
+  97-100  A4    ---     Subclass  Spectral subclass from LAMOST pipeline
+ 102-106  F5.2  mag     rmag      ? r magnitude from LAMOST FITS (G1)
+ 108-118  A11   ---     ClassADL  Predicted class by our ADL method (G2)
+ 120-121  I2    ---     GroupID   ? Group of spectra for a single object
+     123  I1    ---     GroupSize ? Number of spectra of a single object
+ 125-299  A175  ---     CDS-plot  Link to spectrum's plot in CDS Vizier
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: cans-hou.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label      Explanations
+--------------------------------------------------------------------------------
+   1- 45  A45   ---     SpecL      LAMOST Spectrum filename
+  47- 72  A26   ---     LAMOST     LAMOST Object name
+  74- 84  F11.7 deg     RAdeg      LAMOST Right ascension (J2000)
+  86- 95  F10.7 deg     DEdeg      LAMOST Declination (J2000)
+  97-106  A10   ---     Subclass   Spectral subclass from LAMOST pipeline
+ 108-112  F5.2  mag     rmag       ? r magnitude from LAMOST FITS (G1)
+ 114-124  A11   ---     ClassADL   Predicted class by our ADL method (G2)
+ 126-153  A28   ---     SName      SIMBAD name of cross-matched object
+ 155-167  A13   ---     SMainType  Object type as given in SIMBAD
+ 169-179  A11   ---     SSPType    Spectral type from SIMBAD
+ 181-199  A19   ---     Hou        Object name given by
+                                    Hou et al. (2016RAA....16..138H)
+ 201-211  F11.7 deg     RAHdeg     Right ascension (J2000) by
+                                    Hou et al. (2016RAA....16..138H)
+ 213-222  F10.7 deg     DEHdeg     Declination (J2000) by
+                                    Hou et al. (2016RAA....16..138H)
+ 224-226  A3    ---     HalphaType Type of line profile by
+                                    Hou et al. (2016RAA....16..138H)
+ 228-239  A12   ---     ObjType    Type of object by
+                                    Hou et al. (2016RAA....16..138H)
+ 241-243  I3    ---     GroupID    ? Group of spectra for a single object
+     245  I1    ---     GroupSize  ? Number of spectra of a single object
+ 247-421  A175  ---     CDS-plot2  Link to spectrum's plot in CDS Vizier
+-------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: cans-sim.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1- 45  A45   ---     SpecL     LAMOST Spectrum filename
+  47- 72  A26   ---     LAMOST    LAMOST Object name
+  74- 84  F11.7 deg     RAdeg     LAMOST Right ascension (J2000)
+  86- 95  F10.7 deg     DEdeg     LAMOST Declination (J2000)
+  97-106  A10   ---     Subclass  Spectral subclass from LAMOST pipeline
+ 108-112  F5.2  mag     rmag      ? r magnitude from LAMOST FITS (G1)
+ 114-124  A11   ---     ClassADL  Predicted class by ADL method (G2)
+ 126-154  A29   ---     SName     SIMBAD name of cross-matched object
+ 156-169 F14.10 deg     RASdeg    SIMBAD Right ascension (J2000)
+ 171-183 F13.10 deg     DESdeg    SIMBAD Declination (J2000)
+ 186-200  A15   ---     RASsexa   Right ascension as in SIMBAD
+ 203-217  A15   ---     DESsexa   Declination as in SIMBAD
+ 219-233  A15   ---     SMainType Object type as given in SIMBAD
+ 235-245  A11   ---     SSPType   ? Spectral type from SIMBAD
+ 247-255  F9.6  arcsec  AngDist   Angular distance of cross-match (1)
+ 257-258  I2    ---     GroupID   ? Group of spectra for single object
+     260  I1    ---     GroupSize ? Number of spectra of single object
+ 262-436  A175  ---     CDS-plot3 Link to spectrum's plot in Vizier
+--------------------------------------------------------------------------------
+Note (1): Angular distance between LAMOST and cross-matched SIMBAD position
+    which may indicate wrong cross-match.
+--------------------------------------------------------------------------------
+
+Global Notes:
+Note (G1): SDSS r magnitude from LAMOST FITS header. It is according to
+    Luo et al. (2015RAA....15.1095L, Cat. V/146) the main parameter for target
+    selection. It is also an estimate of brightness of the star in Halpha
+    spectral region.
+Note (G2): Class assigned by our active deep learning method. It is either
+    "emission" (single-peak emission) or "double peak" (double-peak emission).
+--------------------------------------------------------------------------------
+
+Acknowledgements:
+    Ondrej Podsztavek, podszond(at)fit.cvut.cz
+    Petr Skoda, skoda(at)sunstel.asu.cas.cz
+
+References:
+    Luo et al., LAMOST DR1, 2015RAA....15.1095L,  Cat. V/146
+    Hou et al.,             2016RAA....16..138H
+
+================================================================================
+(End)  Ondrej Podsztavek [FIT CTU], Patricia Vannier [CDS]           31-Aug-2020

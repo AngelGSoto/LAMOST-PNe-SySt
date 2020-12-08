@@ -1,0 +1,23 @@
+* Export options
+#+TITLE: description.org
+#+AUTHOR: Luis A. Gutierrez Soto 
+#+EMAIL: gsoto.angel@gmail.com
+#+DATE: 08/12/2020
+
+* Planetry nebulae and symbiotic stars in Lamost
+
+I realized exist a important spectroscopic survey (LAMOST) on which it possible to find for new PNe and symbiotic systems. I first explore the known population of PNe and SySt in LAMOST. 
+I found several PNe catalogued in HASH as true, likely and possible PNe as well as SySt.
+
++ Question.
+
+How can I looking for new PNe and SySt in LAMOST?
+
+In spectroscopy survey loke LAMOST is not so easy to find for new objects. 
+Hu et al. (2016RAA....16..138H) developed a technique to find for early-type emission-line stars in LAMOST. To detect the sources they propose a subjective method on which 
+detect for Halpha emission profile (it is an equation). They catalogued around 10000 emission line objects almost all Be stars.
+
+Later, Skoda+, (2020A&A...643A.122S) identify emission line objects in DR2 LAMOST by using a deep learning technique. They identified around 1000 emission line stars. They cleared that used DR 2
+due to the large amount of data in the next data release.
+
++ Possible solution. 
