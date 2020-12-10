@@ -4,7 +4,7 @@
 #+EMAIL: gsoto.angel@gmail.com
 #+DATE: 08/12/2020
 
-* Planetry nebulae and symbiotic stars in Lamost
+* Planetary nebulae and symbiotic stars in Lamost
 
 I realized exist a important spectroscopic survey (LAMOST) on which it possible to find for new PNe and symbiotic systems. I first explore the known population of PNe and SySt in LAMOST. 
 I found several PNe catalogued in HASH as true, likely and possible PNe as well as SySt.
