@@ -13,11 +13,25 @@ I found several PNe catalogued in HASH as true, likely and possible PNe as well 
 
 How can I looking for new PNe and SySt in LAMOST?
 
-In spectroscopy survey loke LAMOST is not so easy to find for new objects. 
+In spectroscopic survey like LAMOST is not so easy to find for new objects. 
 Hu et al. (2016RAA....16..138H) developed a technique to find for early-type emission-line stars in LAMOST. To detect the sources they propose a subjective method on which 
-detect for Halpha emission profile (it is an equation). They catalogued around 10000 emission line objects almost all Be stars.
+detect for Halpha emission profile (it is an equation). They catalogued around 10000 emission line objects almost all are  Be stars.
 
-Later, Skoda+, (2020A&A...643A.122S) identify emission line objects in DR2 LAMOST by using a deep learning technique. They identified around 1000 emission line stars. They cleared that used DR 2
+Later, Skoda+, (2020A&A...643A.122S) identify emission line objects in DR2 LAMOST by using a deep learning technique. They identified around 1000 emission line stars. They clarify that used DR 2
 due to the large amount of data in the next data release.
 
 + Possible solution. 
+
+** Good candidates
+*** Planetary nebulae
++ spec-56685-GAC061N34B2_sp16-143 => RA and DEC: 60.20219 36.07325.
++ spec-56739-HD144825N222355V_sp15-005 => RA and DEC: 221.784571 23.360364. Cataloged in Simbad as candidate Hot subdwarf candidate. 
++ spec-56983-GAC093N22M1_sp13-212 => RA and DEC: 95.246218 23.157741.
+
+*** Symbiotic stars
++ spec-55976-GAC_099N04_V1_sp10-133 => RA and DEC: 97.540398 4.64011
+
+
+* Cone search
+
+- Cone center in 12:10:30.22 +48:51:48.9. Radius 10 degrees.
